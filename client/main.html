@@ -1,0 +1,249 @@
+  <!-- Head -->
+  <head>
+    <!-- Title -->
+    <title>CPS530: Term Project</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <!-- Body -->
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#" class="pull-left"><img src="https://d14xs1qewsqjcd.cloudfront.net/assets/logo-black.svg" width="149" height="36"></a>
+      </div>
+      <ul class="nav navbar-nav">
+	<li><a href="#home" id="home_page">Home</a></li>
+	<li class="dropdown">
+	  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Basic<span class="caret"></span></a>
+	  <ul class="dropdown-menu">
+            <li><a href="#files" id="basic_files">Files</a></li>
+            <li><a href="#html" id="basic_html">HTML</a></li>
+	    <li><a href="#css" id="basic_css">CSS</a></li>
+	    <li><a href="#javascript" id="basic_javascript">JavaScript</a></li>
+	  </ul>
+	</li>
+	<li class="dropdown">
+	  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<span class="caret"></span></a>
+	  <ul class="dropdown-menu">
+	    <li><a href="#tutorial" id="tutorial_page">1 - HTML</a></li>
+	    <li><a href="#tutorial" id="tutorial_02">2 - CSS</a></li>
+<<<<<<< HEAD
+	    <li><a href="#tutorial" id="tutorial_03">3 - JavaScript</a></li>
+	    
+	    
+=======
+	    <li><a href="#tutorial" id="tutorial_03">3 - JavaScript</a></li>	    
+>>>>>>> master
+	  </ul>
+	</li>
+	<li><a href="#page" id="actual_page">Actual Page</a></li>
+	<li><a href="#installation" id="install_page">Installation</a></li>
+	<li><a href="#conclusion" id="conclusion_page">Conclusion</a></li>
+	<li><a href="#credits" id="credits_page">Credits</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  {{> Template.dynamic template=currentPage}}
+
+</body>
+
+<template name="home">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+      	<h1>Welcome to Meteor!</h1>
+      	<p>To create a great looking page, first, you must understand how Meteor works.</p>
+        <h3>Popularity</h3>
+        <p>JavaScript for front-end development has always been popular with web developers. It originated as a clientside language to make interesting UIs and web applications. With the rise of Node.js, web developers were able to start coding full-stack services using only JavaScript. <br><br>
+        NoSQL databases have also risen in popularity, partly due to the popularity of JavaScript. Databases like MongoDB store objects in a syntax similar to JavaScript objects, so JavaScript frameworks and MongoDB typically match well together.<br><br>
+        Meteor makes things easy by bundling several popular JavaScript and development tools together into one cohesive package. The installation is simple, and each tool is already set up to work with the rest of the package. As such, Meteor is very popular for beginners and advanced users alike.<br></p>
+        <h3>What does it include?</h3>
+        <p>The Meteor.js package includes the following tools, already set up for your convenience:</p>
+        <ul>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Grunt/Gulp</li>
+          <li>Mongoose (MongoDB driver)</li>
+          <li>Websocket</li>
+          <li>Angular</li>
+        </ul>
+        <p>The appeal of Meteor.js is that it saves an immeasurable amount of time in just set up. Each package listed above ships and plays well with each other package right out of the box, and are more-or-less necessary for any web developer expecting to develop with JavaScript (though, there are alternatives to packages, such as React instead of Angular).</p>
+        <h3>Technical</h3>
+        <p>Again, Meteor is mostly just a "package of packages". Setting up the various tools and frameworks required for making a full stack website using JavaScript is tedious and time-consuming. The goal of Meteor is to eliminate that time hurdle and get developers working right away.<br><br>
+        Node.js is used as the backend for Meteor development. It allows for JavaScript code to be run serverside. Node.js is itself single-threaded and event driven, which makes it especially quick for developers looking to frequently update content on their pages. Coding a back-end and a front-end using JavaScript also allows for seemless data transition between the two sides without much "translation". JS objects can be sent directly.<br><br>
+        Express.js, put simply, improves upon the syntax of JavaScript and streamlines it for bigger, better, and quicker development. It's an essential tool in the JS developer's toolkit.<br><br>
+        Grunt or Gulp is what makes development live. As soon as you save your document, if you have your page open in a browser, it will update automatically without having to refresh. This is more of a quality-of-life improvement, but saves time.<br><br>
+        Mongoose is what lets you interact with a MongoDB instance through JavaScript. As mentioned previously, MongoDB is an easy-to-use NoSQL database that stores objects in a syntax similar to JS objects. As such, it's extremely popular to use with JavaScript projects.<br><br>
+        Angular is a popular front-end framework</p>
+        <h3>Pros & Cons</h3>
+        <h4>Pros</h4>
+          <ul>
+            <li>Complete toolset ready to go after the install</li>
+            <li>Minimal configuration required</li>
+            <li>All tools update with a Meteor update</li>
+            <li>Ships with "best" tools for the job</li>
+            <li>All development (full stack) in one language</li>
+            <li>Active community and plenty of support</li>
+            <li>Easy in almost every respect from installation to development</li>
+          </ul>
+        <h4>Cons</h4>
+          <ul>
+            <li>Less "under-the-hood" as manual setup</li>
+            <li>Potential issues if specific config parametres are required later on, since setup and config are automatic</li>
+            <li>Ships with very specific tools that may not be desired</li>
+            <li>JavaScript as a backend language is not a complete solution. An alternative may be required if more power is needed.</li>
+          </ul>
+        <h3>Should you use it?</h3>
+        <p>Meteor is meant for developers who want to make websites or informative mobile applications that are not CPU heavy. Simple exchange of information and aesthetically pleasing client-side graphics are what Meteor should be used for. It can even be used for web applications to an extent, though JS comes short on CPU-heavy tasks.</p>
+      </div>
+    </div>
+</div>
+</template>
+
+<template name="files">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+	<h1>Files</h1>
+	There are three main files to a Meteor webpage:
+	<ul>
+	  <li>HTML</li>
+	  <li>CSS</li>
+	  <li>JavaScript</li>
+	</ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="installation">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+	<h1>How to install Meteor and create a project on your system</h1>
+	<h1 style="text-align: center;">For Unix sytems:</h1>
+	<ul>
+	  <li>Step 1: Open your command line terminal and type <code>curl https://install.meteor.com/ | sh</code></li>
+	  <li>Step 2: in the terminal type<code>meteor create nameofapp</code></li>
+	  <li>Step 3: Enter <code>meteor add session</code> to have the session for client and server side</li>
+	  <li>Step 4: To run your app navigate to your project and type <code>meteor run</code></li>
+	</ul>
+	
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="html">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+	<h1>HTML</h1>
+	<p>The three main tags are <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, and <code>&lt;template&gt;</code>.</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="css">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+	<h1>CSS</h1>
+	The basic CSS stuff that we learned to make a website pretty:
+	<ul>
+	  <li>Colours</li>
+	  <li>Font</li>
+	  <li>Images</li>
+	  <li>Effects</li>
+	  <li>Layout</li>
+	</ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="javascript">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+	<h1>JavaScript</h1>
+	<p>The template tag in the html file is used to connect to the Javascript.</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="credits">
+  <div class="background">
+    <div class="transbox">
+      <div class="container-fluid">
+	       <h1>Credits</h1>
+
+         <div class="creditbox" align="center">
+            <br><br>
+
+            <div class="credit">
+            <h4>Dan Gagnon-King</h4>
+            <img src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/14322598_10157568364330571_3299429102591025033_n.jpg?oh=183fd8a50c61612b7d7d3b8b180f98c2&oe=58C5A939">
+            <p><bold>Contributions</bold><br>
+            Homepage and Intro<br>
+            Credits Page</p><br><br>
+            </div>
+            
+            <div class="credit">
+            <h4>Ramy El Khayat</h4>
+            <img src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/12047044_10154226092017697_785470062385176263_n.jpg?oh=dba2083eeb6d5da61fa3c5b2ffe80136&oe=58BC5B0A"><br><br>
+            <p><bold>Contributions</bold><br>
+            Installation Page</p><br><br>
+            </div>
+            
+            <div class="credit">
+            <h4>David Miller</h4>
+            <img src="https://s12.postimg.org/wfwt064v1/david.jpg"><br><br>
+            <p><bold>Contributions</bold><br>
+            Meteor Tutorial<br>
+            Sample App</p><br><br>
+            </div>
+            
+            <div class="credit">
+            <h4>Stephen Nguyen</h4>
+            <img src="https://scontent-yyz1-1.xx.fbcdn.net/t31.0-8/s960x960/1040483_10201392199033508_574451759_o.jpg">
+            <p><bold>Contributions</bold><br>
+            Meteor Tutorial<br>
+            Website Layout</p><br><br>
+            </div>            
+         </div>
+
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="conclusion">
+  <div class="background">
+    <div class="transbox">
+      <div class="container">
+	<h1>Conclusion</h1>
+	<br>
+	<ul>
+	  <li>Basic knowledge of HTML,CSS, and JavaScript is all you really need</li>
+	  <li>Very easy to install</li>
+	  <li>Everyting you need to start is already set up for you</li>
+	  <li>grub auto update was very usefull for quick development cycles</li>
+	  <li>It's lit</li>
+	</ul>
+	<br><br>
+      </div>
+    </div>
+  </div>
+</template>
